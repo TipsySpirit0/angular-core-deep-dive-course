@@ -6,18 +6,10 @@
 </div>
 
 <div class="courses">
+  @for (course of courses; track course.id) {
   <course-card
     (courseSelected)="onCourseSelected($event)"
-    [course]="coreCourse"
-  ></course-card>
-
-  <course-card
-    (courseSelected)="onCourseSelected($event)"
-    [course]="rxjsCourse"
-  ></course-card>
-
-  <course-card
-    (courseSelected)="onCourseSelected($event)"
-    [course]="ngrxCourse"
-  ></course-card>
+    [course]="course"
+  />
+  }
 </div>
