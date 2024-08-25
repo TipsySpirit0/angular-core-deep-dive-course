@@ -8,10 +8,13 @@ import { Course } from "./model/course";
   styleUrls: ["./app.component.css"],
 })
 export class AppComponent {
-  
   courses = [...COURSES];
 
   onCourseSelected(course: Course) {
     console.log("App component - click event bubbled ...", course);
+  }
+
+  trackCourse(index: number, course: Course) {
+    return course.id;
   }
 }
